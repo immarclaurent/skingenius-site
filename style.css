@@ -550,12 +550,8 @@ a {
     width: 100%;
   }
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-  .footer-bottom {
-    flex-direction: column-reverse;
-    align-items: flex-start;
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
   }
 }
 
