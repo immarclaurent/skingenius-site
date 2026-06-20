@@ -16,6 +16,7 @@
   --blue-dark: #1559b8;
   --green: #1e8e3e;
   --red: #d93025;
+  --yellow: #ea8600;
 
   /* Material roles */
   --primary: #1a73e8;
@@ -174,8 +175,21 @@ a {
 
 /* ---------- Hero ---------- */
 .hero {
+  position: relative;
   text-align: center;
   padding: clamp(4.5rem, 11vw, 8rem) 0 clamp(3.5rem, 8vw, 6rem);
+  background:
+    radial-gradient(60% 70% at 15% 0%, rgba(26, 115, 232, 0.10), transparent 60%),
+    radial-gradient(55% 65% at 85% 5%, rgba(217, 48, 37, 0.08), transparent 60%),
+    radial-gradient(50% 60% at 50% 100%, rgba(30, 142, 62, 0.08), transparent 60%);
+}
+
+/* Multi-color Google gradient headline word */
+.grad-word {
+  background: linear-gradient(90deg, var(--blue) 0%, var(--red) 38%, var(--yellow) 68%, var(--green) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .chip {
@@ -235,6 +249,17 @@ a {
   letter-spacing: -0.02em;
   color: var(--primary);
 }
+
+/* Colorful accents */
+.c-blue { color: var(--blue); }
+.c-red { color: var(--red); }
+.c-yellow { color: var(--yellow); }
+.c-green { color: var(--green); }
+
+.bg-blue { background: var(--blue); }
+.bg-red { background: var(--red); }
+.bg-yellow { background: var(--yellow); }
+.bg-green { background: var(--green); }
 
 .stat dd {
   font-size: 0.9rem;
@@ -335,7 +360,6 @@ a {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: var(--primary);
   color: #fff;
   font-size: 1.2rem;
   font-weight: 700;
@@ -360,7 +384,11 @@ a {
 }
 
 .cta-inner {
-  background: linear-gradient(135deg, var(--primary-container), #e8f0fe);
+  background:
+    radial-gradient(80% 120% at 0% 0%, rgba(26, 115, 232, 0.18), transparent 60%),
+    radial-gradient(80% 120% at 100% 0%, rgba(217, 48, 37, 0.14), transparent 60%),
+    radial-gradient(90% 130% at 50% 100%, rgba(30, 142, 62, 0.16), transparent 60%),
+    #eef3fb;
   border-radius: 28px;
   padding: clamp(2.75rem, 6vw, 4.5rem);
   text-align: center;
