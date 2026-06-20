@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="SkinGenius — clinical AI that analyzes skin conditions in seconds, with dermatologist-level accuracy and healthcare-grade security."
+    content="SkinGenius — advanced medical AI for precise skin condition analysis. Dermatologist-level accuracy, real-time results, and a secure, privacy-first architecture."
   />
   <meta name="theme-color" content="#1a73e8" />
   <meta property="og:title" content="SkinGenius — Clinical AI for Skin Analysis" />
-  <meta property="og:description" content="Dermatologist-level skin analysis in seconds." />
+  <meta property="og:description" content="Precise, real-time skin condition analysis powered by medical AI." />
   <meta property="og:url" content="https://skingenius.app/" />
-  <title>SkinGenius — Clinical AI for Skin Analysis</title>
+  <title>SkinGenius — AI Skin Condition Analysis</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,17 +20,19 @@
     rel="stylesheet"
   />
   <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=bolt,encrypted,neurology&display=block"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward,bolt,cloud_upload,encrypted,lock,verified_user&display=block"
     rel="stylesheet"
   />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ===== HEADER ===== -->
-  <header class="header" id="top">
-    <div class="container header-inner">
-      <a class="logo" href="#top" aria-label="SkinGenius home">
+  <!-- ============================================================
+       TOP APP BAR
+  ============================================================ -->
+  <header class="app-bar">
+    <div class="container app-bar-inner">
+      <a class="logo" href="#" aria-label="SkinGenius home">
         <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
           <rect width="40" height="40" rx="12" fill="#1a73e8" />
           <path d="M26 13.5c-2-2-5.5-2.2-7.8-.4-2.3 1.8-2.7 5-1 7.3.9 1.2 2.3 1.9 3.6 2.8 1.3.9 2.2 2.4 1.2 3.9-1 1.5-3.4 1.6-5 .5"
@@ -40,96 +42,123 @@
         <span class="logo-text">SkinGenius</span>
       </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="#features">Platform</a>
-        <a href="#how">How it works</a>
-      </nav>
-
-      <a class="btn btn-filled" href="#access">Request access</a>
+      <a class="btn btn-filled" href="#simulator">Get Started</a>
     </div>
   </header>
 
   <main>
-    <!-- ===== HERO ===== -->
+    <!-- ============================================================
+         HERO + AI SKIN SIMULATOR
+    ============================================================ -->
     <section class="hero">
-      <div class="container">
-        <span class="chip">Clinical decision-support AI</span>
-        <h1 class="hero-title">
-          Dermatologist-level<br /><span class="grad-word">skin analysis</span>, in seconds.
-        </h1>
+      <div class="container hero-inner">
+        <span class="chip">AI-powered dermatology</span>
+
+        <h1 class="hero-title">Precise skin analysis, powered by AI</h1>
+
         <p class="hero-sub">
-          SkinGenius turns a single image into an explainable, evidence-backed
-          assessment — helping clinicians triage faster and expand access to care.
+          SkinGenius analyzes skin conditions in seconds with dermatologist-level
+          accuracy — clear, explainable results you can trust.
         </p>
-        <div class="hero-actions">
-          <a class="btn btn-filled btn-lg" href="#access">Request access</a>
-          <a class="btn btn-tonal btn-lg" href="#how">How it works</a>
+
+        <!-- Floating simulator card -->
+        <div class="simulator" id="simulator">
+          <div class="simulator-head">
+            <h2>AI Skin Simulator</h2>
+            <p>Upload a photo to get an instant, AI-assisted assessment.</p>
+          </div>
+
+          <label class="dropzone" for="photo">
+            <span class="dropzone-icon" aria-hidden="true">
+              <span class="material-symbols-rounded">cloud_upload</span>
+            </span>
+            <span class="dropzone-title">Drag &amp; drop a skin photo</span>
+            <span class="dropzone-sub">or click to browse — JPG or PNG, up to 10&nbsp;MB</span>
+            <span class="btn btn-filled dropzone-btn">
+              <span class="material-symbols-rounded" aria-hidden="true">cloud_upload</span>
+              Upload photo
+            </span>
+            <input id="photo" type="file" accept="image/png, image/jpeg" hidden />
+          </label>
+
+          <p class="simulator-note">
+            <span class="material-symbols-rounded" aria-hidden="true">lock</span>
+            Your images are encrypted and never shared. For clinical decision-support only.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- ===== STATS ===== -->
-    <section class="stats-band">
-      <div class="container stats">
-        <div class="stat"><dt class="c-blue">99.2%</dt><dd>Detection accuracy</dd></div>
-        <div class="stat"><dt class="c-red">&lt;1.5s</dt><dd>Analysis time</dd></div>
-        <div class="stat"><dt class="c-yellow">30+</dt><dd>Conditions supported</dd></div>
-        <div class="stat"><dt class="c-green">HIPAA</dt><dd>Compliant by design</dd></div>
-      </div>
-    </section>
-
-    <!-- ===== FEATURES ===== -->
+    <!-- ============================================================
+         FEATURES GRID
+    ============================================================ -->
     <section class="features" id="features">
       <div class="container">
-        <h2 class="section-title">One platform, end to end</h2>
+        <header class="section-head">
+          <h2 class="section-title">Built for clinical confidence</h2>
+          <p class="section-sub">Everything you need to analyze, understand, and act — securely.</p>
+        </header>
+
         <div class="feature-grid">
           <article class="card feature">
-            <span class="feature-icon tone-blue"><span class="material-symbols-rounded" aria-hidden="true">bolt</span></span>
-            <h3>Real-time accuracy</h3>
-            <p>Dermatologist-level results in under two seconds, validated across all six Fitzpatrick skin types.</p>
+            <span class="feature-icon" aria-hidden="true">
+              <span class="material-symbols-rounded">verified_user</span>
+            </span>
+            <h3>Medical-Grade Accuracy</h3>
+            <p>
+              Trained on millions of clinically validated images and benchmarked
+              against board-certified dermatologists across all skin tones.
+            </p>
           </article>
+
           <article class="card feature">
-            <span class="feature-icon tone-green"><span class="material-symbols-rounded" aria-hidden="true">neurology</span></span>
-            <h3>Explainable by design</h3>
-            <p>Every assessment ships with visual overlays, ranked differentials, and confidence scores.</p>
+            <span class="feature-icon" aria-hidden="true">
+              <span class="material-symbols-rounded">bolt</span>
+            </span>
+            <h3>Real-Time Processing</h3>
+            <p>
+              Edge-optimized inference returns a structured, explainable result in
+              under two seconds — no waiting, no delays.
+            </p>
           </article>
+
           <article class="card feature">
-            <span class="feature-icon tone-red"><span class="material-symbols-rounded" aria-hidden="true">encrypted</span></span>
-            <h3>Healthcare-grade security</h3>
-            <p>HIPAA &amp; GDPR compliant, SOC 2 controls, and encryption at every step.</p>
+            <span class="feature-icon" aria-hidden="true">
+              <span class="material-symbols-rounded">encrypted</span>
+            </span>
+            <h3>Secure Architecture</h3>
+            <p>
+              End-to-end encryption, HIPAA &amp; GDPR compliance, and privacy-first
+              data handling protect patient information at every step.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== HOW IT WORKS ===== -->
-    <section class="how" id="how">
-      <div class="container">
-        <h2 class="section-title">From image to insight in three steps</h2>
-        <ol class="steps">
-          <li class="step"><span class="step-num bg-blue">1</span><h3>Capture</h3><p>Photograph the lesion with any smartphone or import from your EHR.</p></li>
-          <li class="step"><span class="step-num bg-yellow">2</span><h3>Analyze</h3><p>The model returns a ranked differential with confidence scores in real time.</p></li>
-          <li class="step"><span class="step-num bg-green">3</span><h3>Report</h3><p>Get an explainable, exportable report ready for the chart or a referral.</p></li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ===== CTA ===== -->
-    <section class="cta" id="access">
+    <!-- ============================================================
+         CTA
+    ============================================================ -->
+    <section class="cta">
       <div class="container">
         <div class="cta-inner">
-          <h2 class="cta-title">Bring clinical AI to your practice</h2>
-          <p class="cta-text">Join the early-access program to pilot SkinGenius with your team.</p>
-          <a class="btn btn-filled btn-lg" href="mailto:access@skingenius.app">Request access</a>
+          <h2 class="cta-title">Ready to get started?</h2>
+          <p class="cta-text">Bring diagnostic-grade AI into your practice today.</p>
+          <a class="btn btn-filled btn-lg" href="#simulator">
+            Get Started
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer" id="footer">
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
     <div class="container footer-inner">
-      <a class="logo" href="#top">
+      <a class="logo" href="#" aria-label="SkinGenius home">
         <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
           <rect width="40" height="40" rx="12" fill="#1a73e8" />
           <path d="M26 13.5c-2-2-5.5-2.2-7.8-.4-2.3 1.8-2.7 5-1 7.3.9 1.2 2.3 1.9 3.6 2.8 1.3.9 2.2 2.4 1.2 3.9-1 1.5-3.4 1.6-5 .5"
@@ -138,14 +167,17 @@
         </svg>
         <span class="logo-text">SkinGenius</span>
       </a>
-      <nav class="footer-nav">
-        <a href="#features">Platform</a>
-        <a href="#how">How it works</a>
-        <a href="mailto:access@skingenius.app">Contact</a>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#features">Features</a>
+        <a href="#simulator">Simulator</a>
+        <a href="mailto:hello@skingenius.app">Contact</a>
+        <a href="#">Privacy</a>
       </nav>
     </div>
+
     <div class="container footer-bottom">
-      <p>Clinical decision-support tool for qualified healthcare professionals. Not a diagnosis.</p>
+      <p>Clinical decision-support tool for qualified healthcare professionals. Not a medical diagnosis.</p>
       <p>© 2026 SkinGenius, Inc.</p>
     </div>
   </footer>
