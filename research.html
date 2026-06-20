@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SkinGenius research — our datasets, validation methodology, fairness testing, and commitment to responsible, evidence-based dermatology AI." />
+  <meta name="theme-color" content="#1a73e8" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <title>Research — SkinGenius</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="/" aria-label="SkinGenius home">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="12" fill="#1a73e8" />
+          <path d="M26 13.5c-2-2-5.5-2.2-7.8-.4-2.3 1.8-2.7 5-1 7.3.9 1.2 2.3 1.9 3.6 2.8 1.3.9 2.2 2.4 1.2 3.9-1 1.5-3.4 1.6-5 .5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" />
+          <circle cx="27" cy="27" r="2.1" fill="#fff" />
+        </svg>
+        <span class="logo-text">SkinGenius</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/#features">Platform</a>
+        <a href="/#how">How it works</a>
+      </nav>
+      <a class="btn btn-filled" href="/#access">Request access</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-eyebrow">Research</p>
+        <h1 class="page-title">Evidence-based by design</h1>
+        <p class="page-lead">
+          Trustworthy medical AI is built on rigorous data, transparent validation,
+          and continuous fairness testing. Here's how we approach it.
+        </p>
+      </div>
+    </section>
+
+    <section class="page-body">
+      <div class="container prose">
+        <h2>Our datasets</h2>
+        <p>
+          SkinGenius models are trained on more than 2.4 million dermoscopic and
+          clinical images, curated from partner institutions and public research
+          datasets. Every image is labeled against clinical ground truth —
+          histopathology where available, or consensus review by board-certified
+          dermatologists.
+        </p>
+
+        <h2>Validation methodology</h2>
+        <p>
+          We evaluate on held-out datasets that the model never sees during
+          training, and benchmark against panels of dermatologists on the same
+          cases. We report per-condition <strong>sensitivity</strong> and
+          <strong>specificity</strong> — not just headline accuracy — so partners
+          understand exactly where the model is strong and where human review
+          matters most.
+        </p>
+
+        <h2>Fairness across skin tones</h2>
+        <p>
+          Dermatology AI has historically underperformed on darker skin. We
+          deliberately balance training data and audit performance across all six
+          Fitzpatrick skin types, treating any meaningful gap as a release blocker
+          rather than a footnote.
+        </p>
+
+        <h2>Explainability</h2>
+        <p>
+          Each prediction is accompanied by saliency overlays that highlight the
+          regions driving the result, a ranked differential, and calibrated
+          confidence scores. Clinicians see the reasoning, not just a label.
+        </p>
+
+        <h2>Responsible AI</h2>
+        <ul>
+          <li>Human-in-the-loop: outputs are decision-support, never autonomous diagnosis.</li>
+          <li>Continuous monitoring for data drift and real-world performance.</li>
+          <li>Clear communication of uncertainty and known limitations.</li>
+          <li>Governance under an ISO 13485 quality management system.</li>
+        </ul>
+
+        <h2>Publications &amp; collaboration</h2>
+        <p>
+          We work with academic and clinical partners on peer-reviewed validation
+          studies. Detailed performance reports and study protocols are available
+          to qualified institutions under a research agreement.
+        </p>
+        <p class="muted-note">
+          Interested in collaborating? Reach our research team at
+          <a href="mailto:contact@skingenius.app">contact@skingenius.app</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-accent" aria-hidden="true"></div>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="/#features">Platform</a>
+        <a href="/#how">How it works</a>
+        <a href="/#access">Request access</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about.html">About</a>
+        <a href="/research.html">Research</a>
+        <a href="/careers.html">Careers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="/docs.html">Documentation</a>
+        <a href="/privacy.html">Privacy &amp; terms</a>
+        <a href="mailto:contact@skingenius.app">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div class="footer-bottom-text">
+        <p class="footer-copy">© 2026 SkinGenius, Inc. All rights reserved.</p>
+        <p class="footer-disclaimer">Clinical decision-support tool for qualified healthcare professionals. Not a medical diagnosis.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
