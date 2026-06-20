@@ -435,7 +435,7 @@ a {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.6fr repeat(4, 1fr);
+  grid-template-columns: 1.8fr 1fr 1fr 1fr;
   gap: 2.5rem;
   padding-bottom: 3rem;
 }
