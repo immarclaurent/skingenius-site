@@ -495,17 +495,12 @@ a {
 }
 
 .footer-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1.5rem;
   padding-top: 1.75rem;
   border-top: 1px solid var(--line);
 }
 
 .footer-bottom-text {
-  min-width: 0;
+  text-align: center;
 }
 
 .footer-copy {
@@ -517,6 +512,7 @@ a {
 
 .footer-disclaimer {
   max-width: 70ch;
+  margin-inline: auto;
   font-size: 0.85rem;
   color: var(--muted);
 }
