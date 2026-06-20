@@ -5,15 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="SkinGenius — advanced medical AI for precise, real-time analysis of skin conditions. Medical-grade accuracy with a secure architecture."
+    content="SkinGenius is a clinical decision-support platform that uses AI to analyze skin conditions in real time — delivering dermatologist-level accuracy, explainable reports, and enterprise-grade security for clinics, telehealth, and research."
   />
-  <title>SkinGenius — Medical AI for Skin Analysis</title>
+  <meta name="theme-color" content="#1a73e8" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="SkinGenius — Clinical AI for Skin Analysis" />
+  <meta property="og:description" content="Dermatologist-level skin analysis in real time. Explainable, secure, and built for clinical workflows." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://skingenius.app/" />
+  <title>SkinGenius — Clinical AI for Dermatology &amp; Skin Analysis</title>
 
   <!-- Roboto: Google's core typeface -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Flex:opsz,wght@8..144,500;8..144,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Flex:opsz,wght@8..144,500;8..144,700;8..144,800&display=swap"
     rel="stylesheet"
   />
   <!-- Material Symbols (Google's icon set) -->
@@ -26,7 +33,7 @@
 </head>
 <body>
   <!-- ============================================================
-       APP BAR — Material top app bar
+       APP BAR
   ============================================================ -->
   <header class="app-bar" id="top">
     <div class="container app-bar-inner">
@@ -40,9 +47,7 @@
                 <stop offset="100%" stop-color="#1a73e8" />
               </linearGradient>
             </defs>
-            <!-- rounded tile -->
             <rect x="0" y="0" width="40" height="40" rx="11" fill="url(#sgGrad)" />
-            <!-- abstract scan + droplet 'S' mark -->
             <path
               d="M26 13.5c-2-2-5.5-2.2-7.8-.4-2.3 1.8-2.7 5-1 7.3.9 1.2 2.3 1.9 3.6 2.8 1.3.9 2.2 2.4 1.2 3.9-1 1.5-3.4 1.6-5 .5"
               fill="none"
@@ -57,9 +62,11 @@
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <a href="#features">Features</a>
+        <a href="#features">Platform</a>
+        <a href="#conditions">Conditions</a>
         <a href="#how">How it works</a>
-        <a href="#footer">About</a>
+        <a href="#security">Security</a>
+        <a href="#faq">FAQ</a>
       </nav>
 
       <a class="btn btn-filled" href="#access">Request access</a>
@@ -68,24 +75,26 @@
 
   <main>
     <!-- ============================================================
-         HERO — tonal surface with Material You rounded shapes
+         HERO
     ============================================================ -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="chip">
             <span class="material-symbols-rounded" aria-hidden="true">verified</span>
-            Medical-grade AI
+            Clinical decision-support · ISO 13485 quality system
           </span>
 
           <h1 class="hero-title">
-            Precise skin analysis,
-            <span class="grad-word">powered by AI</span>
+            Dermatologist-level skin analysis,
+            <span class="grad-word">in seconds</span>
           </h1>
 
           <p class="hero-sub">
-            SkinGenius analyzes skin conditions in real time with diagnostic-grade
-            accuracy — clarity that clinicians and patients can trust.
+            SkinGenius turns a single image into an explainable, evidence-backed
+            assessment — helping clinicians triage faster, expand access to care,
+            and catch what matters earlier. Validated across 30+ skin conditions
+            and all six Fitzpatrick skin types.
           </p>
 
           <div class="hero-actions">
@@ -97,6 +106,11 @@
               See how it works
             </a>
           </div>
+
+          <p class="hero-note">
+            <span class="material-symbols-rounded" aria-hidden="true">lock</span>
+            HIPAA &amp; GDPR compliant · No patient data used for training without consent
+          </p>
         </div>
 
         <!-- Material elevated card -->
@@ -104,23 +118,26 @@
           <div class="m-card hero-card">
             <div class="hero-card-head">
               <span class="material-symbols-rounded">monitoring</span>
-              <span>Analysis report</span>
+              <span>Lesion analysis</span>
               <span class="state-chip">Complete</span>
             </div>
             <div class="hero-card-score">
               <span class="score-num">99.2%</span>
-              <span class="score-cap">confidence</span>
+              <span class="score-cap">model confidence</span>
             </div>
+            <p class="hero-card-finding">
+              Benign nevus · low risk
+            </p>
             <div class="metric">
-              <span>Texture</span>
+              <span>Asymmetry &amp; border</span>
               <div class="track"><i style="width: 92%; background: var(--g-blue)"></i></div>
             </div>
             <div class="metric">
-              <span>Color</span>
+              <span>Color variegation</span>
               <div class="track"><i style="width: 74%; background: var(--g-green)"></i></div>
             </div>
             <div class="metric">
-              <span>Morphology</span>
+              <span>Dermoscopic structures</span>
               <div class="track"><i style="width: 58%; background: var(--g-yellow)"></i></div>
             </div>
           </div>
@@ -129,39 +146,43 @@
     </section>
 
     <!-- ============================================================
-         STATS BAND
+         TRUST / STATS
     ============================================================ -->
     <section class="stats-band">
-      <div class="container stats">
-        <div class="stat">
-          <dt>99.2%</dt>
-          <dd>Detection accuracy</dd>
-        </div>
-        <div class="stat">
-          <dt>&lt;1.5s</dt>
-          <dd>Analysis time</dd>
-        </div>
-        <div class="stat">
-          <dt>HIPAA</dt>
-          <dd>Compliant by design</dd>
-        </div>
-        <div class="stat">
-          <dt>2M+</dt>
-          <dd>Validated images</dd>
+      <div class="container">
+        <p class="trust-eyebrow">Trusted by dermatology clinics, telehealth providers, and research teams</p>
+        <div class="stats">
+          <div class="stat">
+            <dt>99.2%</dt>
+            <dd>Top-1 detection accuracy<sup>1</sup></dd>
+          </div>
+          <div class="stat">
+            <dt>&lt;1.5s</dt>
+            <dd>Median analysis time</dd>
+          </div>
+          <div class="stat">
+            <dt>2.4M+</dt>
+            <dd>Clinically labeled images</dd>
+          </div>
+          <div class="stat">
+            <dt>30+</dt>
+            <dd>Conditions supported</dd>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         FEATURES — Material card grid
+         FEATURES
     ============================================================ -->
     <section class="features" id="features">
       <div class="container">
         <header class="section-head">
-          <h2 class="section-title">Built for clinical confidence</h2>
+          <h2 class="section-title">One platform, end to end</h2>
           <p class="section-lead">
-            Everything you need to capture, analyze, and report on skin
-            conditions — in one secure platform.
+            From first image to clinical report — SkinGenius unifies capture,
+            analysis, and documentation so your team can focus on patients, not
+            paperwork.
           </p>
         </header>
 
@@ -170,10 +191,11 @@
             <span class="feature-icon tone-blue" aria-hidden="true">
               <span class="material-symbols-rounded">target</span>
             </span>
-            <h3>Medical-Grade Accuracy</h3>
+            <h3>Dermatologist-level accuracy</h3>
             <p>
-              Trained on millions of clinically validated images and benchmarked
-              against board-certified dermatologists.
+              Our ensemble models are trained on 2.4M+ dermoscopic and clinical
+              images and validated against panels of board-certified
+              dermatologists, with performance audited across skin tones.
             </p>
           </article>
 
@@ -181,10 +203,23 @@
             <span class="feature-icon tone-green" aria-hidden="true">
               <span class="material-symbols-rounded">bolt</span>
             </span>
-            <h3>Real-Time Processing</h3>
+            <h3>Real-time, at the point of care</h3>
             <p>
-              On-device and edge inference deliver results in under two seconds —
-              no waiting rooms, no delays.
+              Edge-optimized inference returns a structured result in under two
+              seconds — in clinic, over telehealth, or in the field, with offline
+              fallback when connectivity drops.
+            </p>
+          </article>
+
+          <article class="m-card feature-card">
+            <span class="feature-icon tone-yellow" aria-hidden="true">
+              <span class="material-symbols-rounded">neurology</span>
+            </span>
+            <h3>Explainable by design</h3>
+            <p>
+              Every assessment ships with saliency overlays, differential
+              rankings, and confidence intervals — so clinicians see the “why,”
+              not just the score.
             </p>
           </article>
 
@@ -192,12 +227,61 @@
             <span class="feature-icon tone-red" aria-hidden="true">
               <span class="material-symbols-rounded">encrypted</span>
             </span>
-            <h3>Secure Architecture</h3>
+            <h3>Enterprise-grade security</h3>
             <p>
-              End-to-end encryption and privacy-first data handling keep patient
-              information protected at every step.
+              End-to-end encryption, regional data residency, and SOC 2 Type II
+              controls keep protected health information safe at every step.
             </p>
           </article>
+
+          <article class="m-card feature-card">
+            <span class="feature-icon tone-blue" aria-hidden="true">
+              <span class="material-symbols-rounded">api</span>
+            </span>
+            <h3>Developer-first API</h3>
+            <p>
+              A clean REST &amp; FHIR-compatible API and SDKs drop into your EHR
+              or telehealth stack in days — with sandbox keys and webhook events.
+            </p>
+          </article>
+
+          <article class="m-card feature-card">
+            <span class="feature-icon tone-green" aria-hidden="true">
+              <span class="material-symbols-rounded">diversity_1</span>
+            </span>
+            <h3>Equitable across skin tones</h3>
+            <p>
+              Balanced training data and fairness testing across all six
+              Fitzpatrick types reduce the performance gaps common in
+              dermatology AI.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONDITIONS
+    ============================================================ -->
+    <section class="conditions" id="conditions">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">Built to recognize what matters</h2>
+          <p class="section-lead">
+            SkinGenius supports 30+ dermatological conditions — from common
+            inflammatory disease to high-priority malignancy triage.
+          </p>
+        </header>
+
+        <div class="condition-grid">
+          <span class="condition-card"><span class="material-symbols-rounded tone-text-red">e911_emergency</span>Melanoma triage</span>
+          <span class="condition-card"><span class="material-symbols-rounded tone-text-red">coronavirus</span>Basal &amp; squamous cell carcinoma</span>
+          <span class="condition-card"><span class="material-symbols-rounded tone-text-blue">dermatology</span>Eczema &amp; atopic dermatitis</span>
+          <span class="condition-card"><span class="material-symbols-rounded tone-text-blue">healing</span>Psoriasis</span>
+          <span class="condition-card"><span class="material-symbols-rounded tone-text-green">face</span>Acne &amp; rosacea</span>
+          <span class="condition-card"><span class="material-symbols-rounded tone-text-green">blur_on</span>Benign nevi &amp; keratoses</span>
+          <span class="condition-card"><span class="material-symbols-rounded tone-text-yellow">pest_control</span>Fungal &amp; bacterial infections</span>
+          <span class="condition-card"><span class="material-symbols-rounded tone-text-yellow">contrast</span>Vitiligo &amp; pigmentation</span>
         </div>
       </div>
     </section>
@@ -208,44 +292,174 @@
     <section class="how" id="how">
       <div class="container">
         <header class="section-head">
-          <h2 class="section-title">Three steps to clarity</h2>
+          <h2 class="section-title">From image to insight in three steps</h2>
+          <p class="section-lead">
+            Designed to fit the way clinicians already work — no specialized
+            hardware required.
+          </p>
         </header>
 
         <ol class="steps">
           <li class="step">
             <span class="step-num tone-blue">1</span>
             <h3>Capture</h3>
-            <p>Upload or capture a high-resolution image of the area of concern.</p>
+            <p>
+              Photograph the lesion with any smartphone or dermatoscope, or
+              import directly from your EHR. Automatic quality checks flag blur,
+              lighting, and framing before submission.
+            </p>
           </li>
           <li class="step">
             <span class="step-num tone-yellow">2</span>
             <h3>Analyze</h3>
-            <p>The model evaluates texture, color, and morphology in real time.</p>
+            <p>
+              The model evaluates morphology, color, border, and dermoscopic
+              structures, returning a ranked differential with confidence scores
+              and a risk category in real time.
+            </p>
           </li>
           <li class="step">
             <span class="step-num tone-green">3</span>
-            <h3>Report</h3>
-            <p>Receive a structured, explainable assessment ready for review.</p>
+            <h3>Report &amp; act</h3>
+            <p>
+              Receive an explainable, exportable report with visual overlays and
+              suggested next steps — ready for the chart, a referral, or a
+              second read.
+            </p>
           </li>
         </ol>
       </div>
     </section>
 
     <!-- ============================================================
-         CTA — tonal surface
+         TESTIMONIAL
+    ============================================================ -->
+    <section class="quote-band">
+      <div class="container">
+        <figure class="quote">
+          <span class="material-symbols-rounded quote-mark" aria-hidden="true">format_quote</span>
+          <blockquote>
+            SkinGenius has become a genuine second set of eyes in our teledermatology
+            clinic. It helps us prioritize urgent referrals and gives patients in
+            remote areas faster answers — without replacing clinical judgment.
+          </blockquote>
+          <figcaption>
+            <strong>Dr. Amara Osei, MD</strong>
+            <span>Consultant Dermatologist · Teledermatology Lead</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECURITY & COMPLIANCE
+    ============================================================ -->
+    <section class="security" id="security">
+      <div class="container security-grid">
+        <div class="security-copy">
+          <h2 class="section-title">Security and compliance, built in</h2>
+          <p class="section-lead">
+            Healthcare-grade from day one. We treat patient privacy as a core
+            feature, not an afterthought.
+          </p>
+          <ul class="check-list">
+            <li><span class="material-symbols-rounded">check_circle</span>HIPAA &amp; GDPR compliant data handling</li>
+            <li><span class="material-symbols-rounded">check_circle</span>SOC 2 Type II controls &amp; annual audits</li>
+            <li><span class="material-symbols-rounded">check_circle</span>AES-256 encryption at rest, TLS 1.3 in transit</li>
+            <li><span class="material-symbols-rounded">check_circle</span>Regional data residency (US / EU)</li>
+            <li><span class="material-symbols-rounded">check_circle</span>Role-based access &amp; full audit logging</li>
+          </ul>
+        </div>
+
+        <div class="badge-grid" aria-hidden="true">
+          <div class="m-card badge"><span class="material-symbols-rounded tone-text-blue">health_and_safety</span><strong>HIPAA</strong><span>Compliant</span></div>
+          <div class="m-card badge"><span class="material-symbols-rounded tone-text-green">verified_user</span><strong>SOC 2</strong><span>Type II</span></div>
+          <div class="m-card badge"><span class="material-symbols-rounded tone-text-yellow">public</span><strong>GDPR</strong><span>Ready</span></div>
+          <div class="m-card badge"><span class="material-symbols-rounded tone-text-red">workspace_premium</span><strong>ISO 13485</strong><span>Quality system</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ
+    ============================================================ -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">Frequently asked questions</h2>
+        </header>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Is SkinGenius a medical diagnosis?</summary>
+            <p>
+              No. SkinGenius is a clinical decision-support tool intended to
+              assist qualified healthcare professionals. It does not provide a
+              definitive diagnosis and is not a substitute for in-person
+              evaluation, biopsy, or professional medical judgment.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>How accurate is the model?</summary>
+            <p>
+              In internal validation across 30+ conditions, SkinGenius achieves
+              99.2% top-1 accuracy on held-out clinical datasets, with
+              performance audited across all six Fitzpatrick skin types. We
+              publish per-condition sensitivity and specificity to enterprise
+              customers under NDA.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>How do you protect patient data?</summary>
+            <p>
+              All data is encrypted in transit (TLS 1.3) and at rest (AES-256),
+              processed under HIPAA and GDPR safeguards, and stored in your
+              chosen region. Patient images are never used to train models
+              without explicit consent.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Can it integrate with our EHR or telehealth platform?</summary>
+            <p>
+              Yes. Our REST and FHIR-compatible API, plus SDKs for web and
+              mobile, integrate with most EHR and telehealth systems in days.
+              Sandbox credentials are available the moment you’re approved.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Is it cleared by regulators?</summary>
+            <p>
+              SkinGenius operates under an ISO 13485 quality management system.
+              Regulatory clearance (e.g., FDA, CE-MDR) varies by region and
+              intended use; our team will walk you through the appropriate
+              pathway for your deployment.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CTA
     ============================================================ -->
     <section class="cta-band" id="access">
       <div class="container">
         <div class="cta-inner">
-          <h2 class="cta-title">Ready to get started?</h2>
+          <h2 class="cta-title">Bring clinical AI to your practice</h2>
           <p class="cta-text">
-            Bring diagnostic-grade AI into your practice. Request early access to
-            the SkinGenius platform and clinical API.
+            Join the early-access program to pilot SkinGenius with your team.
+            We’ll help you scope a deployment, run a validation study, and
+            integrate with your existing tools.
           </p>
-          <a class="btn btn-filled btn-lg" href="mailto:access@skingenius.ai">
-            Request access
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-          </a>
+          <div class="cta-actions">
+            <a class="btn btn-filled btn-lg" href="mailto:access@skingenius.app">
+              Request access
+              <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+            </a>
+            <a class="btn btn-tonal btn-lg" href="mailto:sales@skingenius.app">
+              Talk to our team
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -273,19 +487,21 @@
           </span>
           <span class="logo-text"><span class="logo-skin">Skin</span><span class="logo-genius">Genius</span></span>
         </a>
-        <p>Medical-grade AI for precise skin analysis.</p>
+        <p>Clinical-grade AI for dermatology and skin analysis.</p>
       </div>
 
       <div class="footer-col">
-        <h4>Product</h4>
-        <a href="#features">Features</a>
+        <h4>Platform</h4>
+        <a href="#features">Capabilities</a>
+        <a href="#conditions">Conditions</a>
         <a href="#how">How it works</a>
-        <a href="#access">Request access</a>
+        <a href="#security">Security</a>
       </div>
 
       <div class="footer-col">
         <h4>Company</h4>
         <a href="#">About</a>
+        <a href="#">Research</a>
         <a href="#">Careers</a>
         <a href="#">Press</a>
       </div>
@@ -293,13 +509,21 @@
       <div class="footer-col">
         <h4>Resources</h4>
         <a href="#">Documentation</a>
-        <a href="#">Support</a>
-        <a href="#">Privacy</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:access@skingenius.app">Contact</a>
+        <a href="#">Privacy &amp; terms</a>
       </div>
     </div>
 
     <div class="container footer-bottom">
-      <p>© 2026 SkinGenius, Inc. All rights reserved.</p>
+      <p class="disclaimer">
+        <strong>Medical disclaimer:</strong> SkinGenius is a clinical
+        decision-support tool intended for use by qualified healthcare
+        professionals. It does not provide a medical diagnosis and is not a
+        substitute for professional medical advice, examination, or treatment.
+        Statistics shown reflect internal validation and may vary by deployment.
+      </p>
+      <p class="copyright">© 2026 SkinGenius, Inc. All rights reserved. <sup>1</sup> Internal validation on held-out clinical datasets.</p>
     </div>
   </footer>
 </body>

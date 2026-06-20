@@ -574,10 +574,258 @@ a {
 }
 
 .cta-text {
-  max-width: 48ch;
+  max-width: 52ch;
   margin: 0 auto 2rem;
   color: var(--on-surface-variant);
   font-size: 1.15rem;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* ============================================================
+   HERO — extra elements
+============================================================ */
+.hero-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1.75rem;
+  font-size: 0.875rem;
+  color: var(--on-surface-variant);
+}
+
+.hero-note .material-symbols-rounded {
+  font-size: 1.1rem;
+  color: var(--g-green);
+}
+
+.hero-card-finding {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--g-green);
+  margin-bottom: 1.25rem;
+}
+
+/* ============================================================
+   STATS / TRUST
+============================================================ */
+.trust-eyebrow {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--on-surface-variant);
+  margin-bottom: 2.5rem;
+}
+
+.stat dd sup {
+  font-size: 0.65em;
+}
+
+/* Colored icon helpers */
+.tone-text-blue { color: var(--g-blue); }
+.tone-text-green { color: var(--g-green); }
+.tone-text-red { color: var(--g-red); }
+.tone-text-yellow { color: #c08a00; }
+
+/* ============================================================
+   CONDITIONS
+============================================================ */
+.conditions {
+  padding: clamp(4rem, 8vw, 6.5rem) 0;
+}
+
+.condition-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.condition-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface-1);
+  border: 1px solid var(--outline-variant);
+  border-radius: 16px;
+  padding: 1.1rem 1.25rem;
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--on-surface);
+  transition: box-shadow 0.18s ease, transform 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.condition-card:hover {
+  box-shadow: var(--elev-1);
+  transform: translateY(-2px);
+  border-color: transparent;
+}
+
+.condition-card .material-symbols-rounded {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   TESTIMONIAL
+============================================================ */
+.quote-band {
+  background: var(--surface-1);
+  padding: clamp(4rem, 8vw, 6.5rem) 0;
+}
+
+.quote {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quote-mark {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.quote blockquote {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--on-surface);
+  margin-bottom: 1.75rem;
+}
+
+.quote figcaption strong {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--on-surface);
+}
+
+.quote figcaption span {
+  font-size: 0.95rem;
+  color: var(--on-surface-variant);
+}
+
+/* ============================================================
+   SECURITY & COMPLIANCE
+============================================================ */
+.security {
+  padding: clamp(4rem, 8vw, 6.5rem) 0;
+}
+
+.security-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.check-list {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.check-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  font-size: 1.02rem;
+  color: var(--on-surface);
+}
+
+.check-list .material-symbols-rounded {
+  color: var(--g-green);
+  font-size: 1.4rem;
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.35rem;
+  padding: 2rem 1.25rem;
+}
+
+.badge .material-symbols-rounded {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.badge strong {
+  font-size: 1.05rem;
+  color: var(--on-surface);
+}
+
+.badge span {
+  font-size: 0.85rem;
+  color: var(--on-surface-variant);
+}
+
+/* ============================================================
+   FAQ
+============================================================ */
+.faq {
+  padding: clamp(4rem, 8vw, 6.5rem) 0;
+}
+
+.faq-list {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  list-style: none;
+  cursor: pointer;
+  padding: 1.4rem 0;
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--on-surface);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "add";
+  font-family: "Material Symbols Rounded";
+  font-size: 1.5rem;
+  color: var(--primary);
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+  content: "remove";
+}
+
+.faq-item p {
+  padding: 0 0 1.5rem;
+  max-width: 70ch;
+  color: var(--on-surface-variant);
+  font-size: 1rem;
 }
 
 /* ============================================================
@@ -632,6 +880,20 @@ a {
   color: var(--on-surface-variant);
 }
 
+.disclaimer {
+  max-width: 90ch;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.disclaimer strong {
+  color: var(--on-surface);
+}
+
+.copyright sup {
+  font-size: 0.75em;
+}
+
 /* ============================================================
    RESPONSIVE — tablet
 ============================================================ */
@@ -663,6 +925,15 @@ a {
     gap: 2.5rem;
   }
 
+  .condition-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .security-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -680,12 +951,21 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .condition-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .badge-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  .hero-actions {
+  .hero-actions,
+  .cta-actions {
     flex-direction: column;
     align-items: stretch;
   }
