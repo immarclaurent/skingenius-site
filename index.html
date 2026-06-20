@@ -16,7 +16,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=bolt,encrypted,neurology&display=block"
     rel="stylesheet"
   />
 
@@ -41,7 +45,7 @@
         <a href="#how">How it works</a>
       </nav>
 
-      <a class="btn btn-primary" href="#access">Request access</a>
+      <a class="btn btn-filled" href="#access">Request access</a>
     </div>
   </header>
 
@@ -49,6 +53,7 @@
     <!-- ===== HERO ===== -->
     <section class="hero">
       <div class="container">
+        <span class="chip">Clinical decision-support AI</span>
         <h1 class="hero-title">
           Dermatologist-level<br />skin analysis, in seconds.
         </h1>
@@ -57,8 +62,8 @@
           assessment — helping clinicians triage faster and expand access to care.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary btn-lg" href="#access">Request access</a>
-          <a class="btn btn-ghost btn-lg" href="#how">How it works</a>
+          <a class="btn btn-filled btn-lg" href="#access">Request access</a>
+          <a class="btn btn-tonal btn-lg" href="#how">How it works</a>
         </div>
       </div>
     </section>
@@ -78,15 +83,18 @@
       <div class="container">
         <h2 class="section-title">One platform, end to end</h2>
         <div class="feature-grid">
-          <article class="feature">
+          <article class="card feature">
+            <span class="feature-icon tone-blue"><span class="material-symbols-rounded" aria-hidden="true">bolt</span></span>
             <h3>Real-time accuracy</h3>
             <p>Dermatologist-level results in under two seconds, validated across all six Fitzpatrick skin types.</p>
           </article>
-          <article class="feature">
+          <article class="card feature">
+            <span class="feature-icon tone-green"><span class="material-symbols-rounded" aria-hidden="true">neurology</span></span>
             <h3>Explainable by design</h3>
             <p>Every assessment ships with visual overlays, ranked differentials, and confidence scores.</p>
           </article>
-          <article class="feature">
+          <article class="card feature">
+            <span class="feature-icon tone-red"><span class="material-symbols-rounded" aria-hidden="true">encrypted</span></span>
             <h3>Healthcare-grade security</h3>
             <p>HIPAA &amp; GDPR compliant, SOC 2 controls, and encryption at every step.</p>
           </article>
@@ -108,10 +116,12 @@
 
     <!-- ===== CTA ===== -->
     <section class="cta" id="access">
-      <div class="container cta-inner">
-        <h2 class="cta-title">Bring clinical AI to your practice</h2>
-        <p class="cta-text">Join the early-access program to pilot SkinGenius with your team.</p>
-        <a class="btn btn-primary btn-lg" href="mailto:access@skingenius.app">Request access</a>
+      <div class="container">
+        <div class="cta-inner">
+          <h2 class="cta-title">Bring clinical AI to your practice</h2>
+          <p class="cta-text">Join the early-access program to pilot SkinGenius with your team.</p>
+          <a class="btn btn-filled btn-lg" href="mailto:access@skingenius.app">Request access</a>
+        </div>
       </div>
     </section>
   </main>

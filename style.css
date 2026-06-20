@@ -1,21 +1,41 @@
 /* ============================================================
-   SkinGenius — clean, simple, beautiful
-   One accent, generous whitespace, calm typography.
+   SkinGenius — Google Material, kept clean & beautiful
+   Roboto · pill buttons · tonal surfaces · soft elevation
 ============================================================ */
 
-:root {
-  --accent: #1a73e8;
-  --accent-dark: #1559b8;
-  --ink: #18202c;          /* headings */
-  --body: #5a6473;         /* body text */
-  --muted: #8a93a2;        /* subtle text */
-  --line: #eceef1;         /* hairlines */
-  --bg: #ffffff;
-  --bg-soft: #f7f9fc;      /* soft section bg */
+.material-symbols-rounded {
+  font-family: "Material Symbols Rounded";
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
 
-  --max: 960px;
+:root {
+  /* Google colors */
+  --blue: #1a73e8;
+  --blue-dark: #1559b8;
+  --green: #1e8e3e;
+  --red: #d93025;
+
+  /* Material roles */
+  --primary: #1a73e8;
+  --primary-container: #d3e3fd;
+  --on-primary-container: #041e49;
+
+  --ink: #1f1f1f;          /* on-surface */
+  --body: #444746;         /* on-surface-variant */
+  --muted: #5f6368;
+  --line: #e8eaed;         /* outline-variant */
+
+  --surface: #ffffff;
+  --surface-soft: #f6f8fc; /* tonal surface */
+
+  --max: 1040px;
   --gutter: 1.5rem;
-  --shadow: 0 1px 3px rgba(24, 32, 44, 0.06), 0 8px 24px rgba(24, 32, 44, 0.05);
+
+  /* Material elevation */
+  --elev-1: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.1);
+  --elev-2: 0 1px 2px rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.12);
 }
 
 *,
@@ -31,8 +51,8 @@ html {
 }
 
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  background: var(--bg);
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background: var(--surface);
   color: var(--body);
   line-height: 1.65;
   font-size: 1.0625rem;
@@ -52,45 +72,48 @@ a {
   padding-inline: var(--gutter);
 }
 
-/* ---------- Buttons ---------- */
+/* ---------- Buttons (Material pills) ---------- */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
+  font-family: inherit;
+  font-weight: 500;
   font-size: 0.95rem;
   line-height: 1;
-  padding: 0.7rem 1.4rem;
-  border-radius: 10px;
-  border: 1px solid transparent;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 999px;
   cursor: pointer;
-  transition: background-color 0.18s ease, border-color 0.18s ease,
-    transform 0.18s ease;
+  transition: background-color 0.18s ease, box-shadow 0.18s ease, transform 0.15s ease;
+}
+
+.btn:active {
+  transform: scale(0.97);
 }
 
 .btn-lg {
-  padding: 0.9rem 1.7rem;
+  padding: 0.9rem 1.8rem;
   font-size: 1rem;
 }
 
-.btn-primary {
-  background: var(--accent);
+.btn-filled {
+  background: var(--primary);
   color: #fff;
 }
 
-.btn-primary:hover {
-  background: var(--accent-dark);
-  transform: translateY(-1px);
+.btn-filled:hover {
+  background: var(--blue-dark);
+  box-shadow: var(--elev-2);
 }
 
-.btn-ghost {
-  color: var(--ink);
-  border-color: var(--line);
-  background: #fff;
+.btn-tonal {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
 }
 
-.btn-ghost:hover {
-  border-color: var(--muted);
+.btn-tonal:hover {
+  box-shadow: var(--elev-1);
 }
 
 /* ---------- Header ---------- */
@@ -121,10 +144,12 @@ a {
   width: 34px;
   height: 34px;
   display: block;
+  border-radius: 10px;
+  box-shadow: var(--elev-1);
 }
 
 .logo-text {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -144,20 +169,31 @@ a {
 }
 
 .nav a:hover {
-  color: var(--accent);
+  color: var(--primary);
 }
 
 /* ---------- Hero ---------- */
 .hero {
   text-align: center;
-  padding: clamp(5rem, 12vw, 9rem) 0 clamp(3.5rem, 8vw, 6rem);
+  padding: clamp(4.5rem, 11vw, 8rem) 0 clamp(3.5rem, 8vw, 6rem);
+}
+
+.chip {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--on-primary-container);
+  background: var(--primary-container);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1.75rem;
 }
 
 .hero-title {
-  font-size: clamp(2.4rem, 6vw, 4rem);
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
+  font-size: clamp(2.4rem, 6vw, 3.9rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
   color: var(--ink);
   margin-bottom: 1.5rem;
 }
@@ -195,9 +231,9 @@ a {
 
 .stat dt {
   font-size: clamp(1.7rem, 3vw, 2.2rem);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.02em;
-  color: var(--ink);
+  color: var(--primary);
 }
 
 .stat dd {
@@ -217,6 +253,14 @@ a {
   margin-bottom: 3.5rem;
 }
 
+/* ---------- Cards ---------- */
+.card {
+  background: var(--surface);
+  border-radius: 24px;
+  box-shadow: var(--elev-1);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
 /* ---------- Features ---------- */
 .features {
   padding: clamp(4.5rem, 9vw, 7rem) 0;
@@ -225,12 +269,35 @@ a {
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 
 .feature {
-  text-align: center;
+  padding: 2.25rem 2rem;
 }
+
+.feature:hover {
+  box-shadow: var(--elev-2);
+  transform: translateY(-4px);
+}
+
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.feature-icon .material-symbols-rounded {
+  font-size: 1.75rem;
+}
+
+.tone-blue { background: #d3e3fd; color: var(--blue); }
+.tone-green { background: #ceead6; color: var(--green); }
+.tone-red { background: #fad2cf; color: var(--red); }
 
 .feature h3 {
   font-size: 1.2rem;
@@ -246,7 +313,7 @@ a {
 
 /* ---------- How it works ---------- */
 .how {
-  background: var(--bg-soft);
+  background: var(--surface-soft);
   padding: clamp(4.5rem, 9vw, 7rem) 0;
 }
 
@@ -255,7 +322,6 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
-  counter-reset: step;
 }
 
 .step {
@@ -266,12 +332,12 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--primary);
   color: #fff;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 1.25rem;
 }
@@ -294,26 +360,25 @@ a {
 }
 
 .cta-inner {
+  background: linear-gradient(135deg, var(--primary-container), #e8f0fe);
+  border-radius: 28px;
+  padding: clamp(2.75rem, 6vw, 4.5rem);
   text-align: center;
-  max-width: 620px;
-}
-
-.container.cta-inner {
-  margin-inline: auto;
 }
 
 .cta-title {
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: var(--ink);
+  color: var(--on-primary-container);
   margin-bottom: 1rem;
 }
 
 .cta-text {
+  max-width: 48ch;
+  margin: 0 auto 2rem;
   font-size: 1.1rem;
   color: var(--body);
-  margin-bottom: 2rem;
 }
 
 /* ---------- Footer ---------- */
@@ -344,7 +409,7 @@ a {
 }
 
 .footer-nav a:hover {
-  color: var(--accent);
+  color: var(--primary);
 }
 
 .footer-bottom {
@@ -374,7 +439,7 @@ a {
   .feature-grid,
   .steps {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 1.5rem;
   }
 }
 
