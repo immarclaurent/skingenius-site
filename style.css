@@ -558,3 +558,188 @@ a {
     align-items: flex-start;
   }
 }
+
+/* ============================================================
+   SUBPAGES (About, Research, Careers, Docs, Privacy)
+============================================================ */
+.page-hero {
+  background: var(--surface-soft);
+  border-bottom: 1px solid var(--line);
+  padding: clamp(3.5rem, 8vw, 5.5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
+  text-align: center;
+}
+
+.page-eyebrow {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.page-title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.page-lead {
+  max-width: 58ch;
+  margin: 1.25rem auto 0;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  color: var(--body);
+}
+
+.page-body {
+  padding: clamp(3rem, 7vw, 5rem) 0;
+}
+
+/* Readable prose */
+.prose {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 2.75rem 0 0.85rem;
+}
+
+.prose > h2:first-child {
+  margin-top: 0;
+}
+
+.prose h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 1.75rem 0 0.5rem;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+.prose ul {
+  margin: 0 0 1.25rem 1.25rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose a {
+  color: var(--primary);
+}
+
+.prose a:hover {
+  text-decoration: underline;
+}
+
+.prose strong {
+  color: var(--ink);
+}
+
+.muted-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Code blocks (docs) */
+.prose pre {
+  background: #1f1f1f;
+  color: #e8eaed;
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+  overflow: auto;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+
+.prose pre code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+.prose p code,
+.prose li code {
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.1rem 0.35rem;
+  font-size: 0.85em;
+  color: var(--ink);
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+/* Tiles (values / benefits) */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 1.75rem;
+}
+
+.tile {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: var(--elev-1);
+}
+
+.tile h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.tile p {
+  margin: 0;
+  font-size: 0.93rem;
+  color: var(--body);
+}
+
+/* Open roles */
+.role {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1.2rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.role:hover {
+  box-shadow: var(--elev-2);
+  transform: translateY(-2px);
+}
+
+.role-info h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.role-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.role .btn {
+  flex-shrink: 0;
+}

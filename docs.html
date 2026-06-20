@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SkinGenius documentation — get started with the clinical AI API: authentication, quickstart, endpoints, and SDKs." />
+  <meta name="theme-color" content="#1a73e8" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <title>Documentation — SkinGenius</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="/" aria-label="SkinGenius home">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="12" fill="#1a73e8" />
+          <path d="M26 13.5c-2-2-5.5-2.2-7.8-.4-2.3 1.8-2.7 5-1 7.3.9 1.2 2.3 1.9 3.6 2.8 1.3.9 2.2 2.4 1.2 3.9-1 1.5-3.4 1.6-5 .5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" />
+          <circle cx="27" cy="27" r="2.1" fill="#fff" />
+        </svg>
+        <span class="logo-text">SkinGenius</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/#features">Platform</a>
+        <a href="/#how">How it works</a>
+      </nav>
+      <a class="btn btn-filled" href="/#access">Request access</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-eyebrow">Documentation</p>
+        <h1 class="page-title">Integrate SkinGenius in minutes</h1>
+        <p class="page-lead">
+          A clean REST API to add skin-analysis to your clinical, telehealth, or
+          research application. Below is a quick overview to get you started.
+        </p>
+      </div>
+    </section>
+
+    <section class="page-body">
+      <div class="container prose">
+        <h2>Getting started</h2>
+        <p>
+          Access to the API is granted through our early-access program. Once
+          approved, you'll receive a sandbox key to build and test against before
+          going live. Request access at
+          <a href="mailto:contact@skingenius.app">contact@skingenius.app</a>.
+        </p>
+
+        <h2>Authentication</h2>
+        <p>
+          All requests are authenticated with a bearer token sent in the
+          <code>Authorization</code> header over HTTPS. Never expose your secret
+          key in client-side code.
+        </p>
+        <pre><code>Authorization: Bearer sk_live_your_api_key</code></pre>
+
+        <h2>Quickstart</h2>
+        <p>Submit an image for analysis:</p>
+        <pre><code>curl https://api.skingenius.app/v1/analyze \
+  -H "Authorization: Bearer sk_live_your_api_key" \
+  -F "image=@lesion.jpg"</code></pre>
+        <p>Example response:</p>
+        <pre><code>{
+  "id": "an_8f2c1a",
+  "risk": "low",
+  "confidence": 0.992,
+  "predictions": [
+    { "label": "benign_nevus", "score": 0.92 },
+    { "label": "seborrheic_keratosis", "score": 0.05 }
+  ],
+  "overlay_url": "https://api.skingenius.app/v1/overlay/an_8f2c1a"
+}</code></pre>
+
+        <h2>Endpoints</h2>
+        <ul>
+          <li><code>POST /v1/analyze</code> — submit an image and receive an assessment.</li>
+          <li><code>GET /v1/analyses/:id</code> — retrieve a previous analysis.</li>
+          <li><code>GET /v1/overlay/:id</code> — fetch the saliency overlay image.</li>
+          <li><code>POST /v1/webhooks</code> — register endpoints for async events.</li>
+        </ul>
+
+        <h2>SDKs</h2>
+        <p>
+          Official client libraries are available for JavaScript/TypeScript and
+          Python, with a FHIR-compatible layer for EHR integrations. Mobile
+          (iOS/Android) SDKs are in early access.
+        </p>
+
+        <h2>Support</h2>
+        <p>
+          Questions or integration help? Email
+          <a href="mailto:contact@skingenius.app">contact@skingenius.app</a> and our
+          team will get back to you.
+        </p>
+        <p class="muted-note">
+          Note: endpoints shown are illustrative of the platform and may change
+          before general availability.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-accent" aria-hidden="true"></div>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="/#features">Platform</a>
+        <a href="/#how">How it works</a>
+        <a href="/#access">Request access</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about.html">About</a>
+        <a href="/research.html">Research</a>
+        <a href="/careers.html">Careers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="/docs.html">Documentation</a>
+        <a href="/privacy.html">Privacy &amp; terms</a>
+        <a href="mailto:contact@skingenius.app">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div class="footer-bottom-text">
+        <p class="footer-copy">© 2026 SkinGenius, Inc. All rights reserved.</p>
+        <p class="footer-disclaimer">Clinical decision-support tool for qualified healthcare professionals. Not a medical diagnosis.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
