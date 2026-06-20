@@ -438,6 +438,7 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
   padding-bottom: 2.5rem;
+  text-align: center;
 }
 
 .footer-social {
