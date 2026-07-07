@@ -11,6 +11,12 @@
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="SkinGenius" />
+  <meta name="mobile-web-app-capable" content="yes" />
   <meta property="og:title" content="SkinGenius — Clinical AI for Skin Analysis" />
   <meta property="og:description" content="Dermatologist-level skin analysis in seconds." />
   <meta property="og:url" content="https://skingenius.app/" />
@@ -166,5 +172,6 @@
       </div>
     </div>
   </footer>
+  <script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js");});}</script>
 </body>
 </html>
