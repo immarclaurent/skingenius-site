@@ -1,5 +1,5 @@
 /* SkinGenius service worker — offline-capable PWA shell */
-const CACHE = "skingenius-v2";
+const CACHE = "skingenius-v3";
 const ASSETS = [
   "/",
   "/index.html",
@@ -12,6 +12,7 @@ const ASSETS = [
   "/privacy.html",
   "/icon-192.png",
   "/icon-512.png",
+  "/og-image.png",
   "/manifest.webmanifest"
 ];
 
