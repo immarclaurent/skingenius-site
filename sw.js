@@ -1,4 +1,4 @@
-/* SkinGenius service worker — offline-capable PWA shell */
+/* Offline-capable PWA shell */
 const CACHE = "skingenius-v3";
 const ASSETS = [
   "/",
@@ -32,7 +32,7 @@ self.addEventListener("activate", (event) => {
   );
 });
 
-// Cache-first for same-origin GETs, with network fallback and offline page
+// Cache-first for same-origin GETs, fall back to network then offline page
 self.addEventListener("fetch", (event) => {
   const req = event.request;
   if (req.method !== "GET" || new URL(req.url).origin !== self.location.origin) return;
